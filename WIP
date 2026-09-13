@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiena Mae Villas-Saguran | IT Engineer & Systems Administrator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-slate-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-900 flex items-center gap-2">
+                <span class="bg-sky-600 text-white p-2 rounded-lg text-sm font-mono"><i data-lucide="terminal" class="w-5 h-5"></i></span>
+                <span>Shiena Mae <span class="text-sky-600">Villas-Saguran</span></span>
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-sky-600 transition-colors">About</a>
+                <a href="#skills" class="hover:text-sky-600 transition-colors">Skills & Tech</a>
+                <a href="#experience" class="hover:text-sky-600 transition-colors">Experience</a>
+                <a href="#certifications" class="hover:text-sky-600 transition-colors">Certifications</a>
+                <a href="mailto:villasshienamae@gmail.com" class="bg-sky-600 hover:bg-sky-700 text-white px-5 py-2.5 rounded-full font-semibold shadow-md shadow-sky-600/20 hover:shadow-lg hover:shadow-sky-600/30 transition-all flex items-center gap-2">
+                    Let’s Work together!
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden p-2 text-slate-600 hover:text-slate-900 focus:outline-none" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-600 hover:text-sky-600 font-medium">About</a>
+            <a href="#skills" class="block py-2 text-slate-600 hover:text-sky-600 font-medium">Skills & Tech</a>
+            <a href="#experience" class="block py-2 text-slate-600 hover:text-sky-600 font-medium">Experience</a>
+            <a href="#certifications" class="block py-2 text-slate-600 hover:text-sky-600 font-medium">Certifications</a>
+            <div class="pt-2">
+                <a href="mailto:villasshienamae@gmail.com" class="w-full bg-sky-600 hover:bg-sky-700 text-white px-5 py-3 rounded-xl font-semibold shadow-md flex items-center justify-center gap-2">
+                    Let’s Work together!
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="about" class="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-sky-50/50 via-slate-50 to-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-100 text-sky-800 text-xs font-semibold uppercase tracking-wider">
+                            <span class="w-2 h-2 rounded-full bg-sky-600 animate-pulse"></span>
+                            IT Engineer & Systems Administrator
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                            Enterprise IT Infrastructure, <span class="text-sky-600">Cloud Migrations</span> & Systems Engineering
+                        </h1>
+                        <p class="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                            Senior IT professional specializing in Microsoft Azure, Active Directory/Entra ID migrations, MSP operations, virtualization, cloud backup/disaster recovery, and Level 1–3 technical support.
+                        </p>
+                        
+                        <!-- CTA & Social Links -->
+                        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                            <a href="mailto:villasshienamae@gmail.com" class="w-full sm:w-auto bg-sky-600 hover:bg-sky-700 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-sky-600/25 hover:shadow-xl hover:shadow-sky-600/35 transition-all flex items-center justify-center gap-3 text-lg">
+                                Let’s Work together!
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/shiena-mae-villas-saguran-b59506125" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-white border border-slate-300 hover:border-sky-500 text-slate-700 hover:text-sky-600 px-6 py-4 rounded-xl font-semibold shadow-sm hover:shadow transition-all flex items-center justify-center gap-2">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                                LinkedIn Profile
+                            </a>
+                        </div>
+
+                        <!-- Quick Info Badges -->
+                        <div class="pt-8 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-3 gap-4 text-left">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2.5 bg-white rounded-lg border border-slate-200 shadow-sm text-sky-600">
+                                    <i data-lucide="server" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-500 font-medium">Specialization</div>
+                                    <div class="text-sm font-semibold text-slate-900">Cloud & MSP Support</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="p-2.5 bg-white rounded-lg border border-slate-200 shadow-sm text-sky-600">
+                                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-500 font-medium">Certifications</div>
+                                    <div class="text-sm font-semibold text-slate-900">20+ Technical Certs</div>
+                                </div>
+                            </div>
+                            <div class="col-span-2 sm:col-span-1 flex items-center gap-3">
+                                <div class="p-2.5 bg-white rounded-lg border border-slate-200 shadow-sm text-sky-600">
+                                    <i data-lucide="globe" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-500 font-medium">Location</div>
+                                    <div class="text-sm font-semibold text-slate-900">Metro Manila, PH</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Side Card -->
+                    <div class="lg:col-span-5">
+                        <div class="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white shadow-2xl relative overflow-hidden border border-slate-700">
+                            <div class="absolute -right-10 -top-10 w-40 h-40 bg-sky-500/10 rounded-full blur-2xl"></div>
+                            <div class="space-y-6 relative z-10">
+                                <div class="flex items-center justify-between border-b border-slate-700/80 pb-6">
+                                    <div>
+                                        <h3 class="text-xl font-bold">Quick Overview</h3>
+                                        <p class="text-xs text-slate-400">Core Expertise & Contact</p>
+                                    </div>
+                                    <span class="p-2 bg-sky-500/20 text-sky-400 rounded-xl border border-sky-500/30">
+                                        <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+                                    </span>
+                                </div>
+                                
+                                <ul class="space-y-3 text-sm text-slate-300">
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="chevron-right" class="w-4 h-4 text-sky-400 mt-0.5 shrink-0"></i>
+                                        <span>Full Cloud & Infrastructure Migration Management</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="chevron-right" class="w-4 h-4 text-sky-400 mt-0.5 shrink-0"></i>
+                                        <span>Microsoft 365, Azure Active Directory / Entra ID, Intune</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="chevron-right" class="w-4 h-4 text-sky-400 mt-0.5 shrink-0"></i>
+                                        <span>Backup & Disaster Recovery (Veeam, Datto, Wasabi)</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="chevron-right" class="w-4 h-4 text-sky-400 mt-0.5 shrink-0"></i>
+                                        <span>Network Security, Sophos Firewall, VPN & Duo MFA</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i data-lucide="chevron-right" class="w-4 h-4 text-sky-400 mt-0.5 shrink-0"></i>
+                                        <span>MSP PSA/RMM (Halo, Hudu, ConnectWise, IT Glue)</span>
+                                    </li>
+                                </ul>
+
+                                <div class="pt-4 border-t border-slate-700/80">
+                                    <a href="mailto:villasshienamae@gmail.com" class="w-full bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold py-3.5 rounded-xl transition-all flex items-center justify-center gap-2">
+                                        Let’s Work together!
+                                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills & Capabilities -->
+        <section id="skills" class="py-20 bg-white border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-bold text-sky-600 uppercase tracking-widest">Technical Competencies</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Skills, Platforms & Tools</p>
+                    <p class="text-slate-600">Extensive experience across enterprise systems, managed service tools, virtualization, networking, and cloud platforms.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Category 1 -->
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-sky-300 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="cloud" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Cloud & Identity Management</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Microsoft Azure</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Microsoft Entra ID</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Active Directory</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Microsoft 365</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">SharePoint</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Microsoft Intune / MDM</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Exchange / cPanel</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Google Drive / Dropbox</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2 -->
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-sky-300 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="database" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Backup & Virtualization</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Veeam Data Platform</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Veeam Backup for M365</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Datto BCDR</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">StorageCraft</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Wasabi</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">VMware</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Hyper-V</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Kubernetes</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3 -->
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-sky-300 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="shield" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">Networking & Security</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Sophos Firewall</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Sophos Central Endpoint</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">pfSense</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Microsoft Defender</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Duo Security MFA</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">WatchGuard AuthPoint</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">VPN / RDP</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">DHCP / GPO / WAN / LAN</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4 -->
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-sky-300 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="wrench" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">MSP Tools & Documentation</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Halo PSA</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Hudu</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">IT Glue</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">ConnectWise RMM / PSA</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Datto RMM</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Addigy</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">SOP Development</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 5 -->
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-sky-300 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="phone-call" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">VoIP & Unified Communications</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">3CX Phone System</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Microsoft Teams Phone</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Auto Attendants & Call Routing</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">IP Phone Provisioning</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">GoAutoDial PBX</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 6 -->
+                    <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/80 hover:border-sky-300 hover:shadow-md transition-all">
+                        <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="code" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">OS, Scripting & Databases</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">Windows Server / 10 / 11</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">macOS / iOS / Android</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">PowerShell</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">MS SQL Server</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">MongoDB</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-700">JSON</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section CTA Bar -->
+                <div class="mt-12 p-6 bg-slate-900 rounded-2xl text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+                    <div>
+                        <h4 class="text-lg font-bold text-white">Need technical expertise for your IT infrastructure?</h4>
+                        <p class="text-slate-400 text-sm">Available for IT engineering, cloud migrations, and systems administration project support.</p>
+                    </div>
+                    <a href="mailto:villasshienamae@gmail.com" class="shrink-0 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold px-6 py-3 rounded-xl transition-all">
+                        Let’s Work together!
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Timeline -->
+        <section id="experience" class="py-20 bg-slate-50">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-bold text-sky-600 uppercase tracking-widest">Career History</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Professional Experience</p>
+                    <p class="text-slate-600">A proven track record of managing complex technical environments, executing cloud migrations, and delivering L1–L3 IT support.</p>
+                </div>
+
+                <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:-ml-px before:w-0.5 before:bg-slate-200">
+
+                    <!-- Job 1 -->
+                    <div class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full border-2 border-sky-600 bg-white group-hover:bg-sky-600 text-sky-600 group-hover:text-white shadow transition-all shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="px-3 py-1 bg-sky-50 text-sky-700 font-semibold text-xs rounded-full">April 2025 – Present</span>
+                                <span class="text-xs font-medium text-slate-500">ScalableOS</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">IT Engineer</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                <li>Executed Microsoft Azure migrations, including Active Directory to Microsoft Entra ID, on-premises servers to Azure Compute, and cloud data migrations across SharePoint, Teams, Dropbox, Google Drive, and M365.</li>
+                                <li>Deployed and managed Microsoft Teams Phone solutions, including licensing, call routing, auto attendants, and IP phone provisioning.</li>
+                                <li>Managed network refreshes (firewalls, switches, WAPs), operating system upgrades, VPNs, RDP, and MFA integrations using Duo.</li>
+                                <li>Implemented Veeam backup solutions (Veeam Backup & Replication, Veeam Agent, Veeam Backup for M365, Cloud Connect).</li>
+                                <li>Deployed and managed Microsoft Azure and security services, including Intune MDM, Defender for Office 365, and Defender for Endpoint.</li>
+                                <li>Managed onboarding projects, ISP circuit provisioning, office relocations, Hudu documentation, and Halo ticketing workflows while maintaining Level 1–3 remote support SLAs.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full border-2 border-sky-600 bg-white group-hover:bg-sky-600 text-sky-600 group-hover:text-white shadow transition-all shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="px-3 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-full">May 2023 – April 2025</span>
+                                <span class="text-xs font-medium text-slate-500">Techno Global Team Inc.</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">IT Engineer 2</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                <li>Delivered IT support across Microsoft business applications, Windows OS, server monitoring, Hyper-V, and VMware virtual environments.</li>
+                                <li>Monitored client infrastructure via ConnectWise RMM, resolving alerts and technical incidents.</li>
+                                <li>Implemented disaster recovery and backup solutions using Datto, Veeam, StorageCraft, and Wasabi.</li>
+                                <li>Administered Active Directory, Azure AD (Microsoft Entra ID), Sophos Firewalls, Duo/AuthPoint/Azure MFA, and 3CX phone systems.</li>
+                                <li>Executed cloud migrations to SharePoint and deployed Microsoft Intune endpoint management policies. Maintained technical documentation in IT Glue.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full border-2 border-sky-600 bg-white group-hover:bg-sky-600 text-sky-600 group-hover:text-white shadow transition-all shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="px-3 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-full">Nov 2022 – Apr 2023</span>
+                                <span class="text-xs font-medium text-slate-500">Reekoh</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Technical Support Engineer</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                <li>Provided product technical support, bug fix implementations, and SLA-compliant incident diagnosis.</li>
+                                <li>Applied hands-on expertise with Kubernetes, MongoDB, JSON, and SQL for application troubleshooting and maintenance.</li>
+                                <li>Managed user onboarding, product setup, account maintenance, and cross-functional documentation.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 4 -->
+                    <div class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full border-2 border-sky-600 bg-white group-hover:bg-sky-600 text-sky-600 group-hover:text-white shadow transition-all shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="px-3 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-full">Oct 2021 – Nov 2022</span>
+                                <span class="text-xs font-medium text-slate-500">Mabcore Inc.</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">IT Desktop Support II</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                <li>Managed helpdesk ticketing, user onboarding, Active Directory, GPO, VPN permissions, and MS Exchange distribution lists.</li>
+                                <li>Administered Office 365, Azure AD, MDM, and Amazon Workspaces end-user environments.</li>
+                                <li>Utilized PowerShell and MS SQL Server Management Studio for system administration and automated troubleshooting.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 5 -->
+                    <div class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full border-2 border-sky-600 bg-white group-hover:bg-sky-600 text-sky-600 group-hover:text-white shadow transition-all shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="px-3 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-full">Feb 2017 – Oct 2021</span>
+                                <span class="text-xs font-medium text-slate-500">Philippine Racing Club Inc.</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">IT Specialist</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                <li>Provided first-line support to 200+ users across hardware, software, network systems, and GoAutoDial PBX setups.</li>
+                                <li>Administered Active Directory, DHCP, GPO, cPanel emails, Samba shares, and pfSense firewalls.</li>
+                                <li>Managed workstation imaging, hardware inventory, CCTV operations, and authoring of technical SOPs.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 6 -->
+                    <div class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full border-2 border-sky-600 bg-white group-hover:bg-sky-600 text-sky-600 group-hover:text-white shadow transition-all shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                                <span class="px-3 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-full">May 2016 – Jan 2017</span>
+                                <span class="text-xs font-medium text-slate-500">Convergys Philippines</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Technical Support Associate II</h3>
+                            <ul class="mt-4 space-y-2 text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                <li>Provided remote/phone technical support for global users, QuickBooks troubleshooting, desktop setup, and software installations.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Early Roles -->
+                    <div class="relative flex items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-9 h-9 rounded-full border-2 border-slate-300 bg-white text-slate-400 group-hover:border-sky-600 group-hover:text-sky-600 shadow transition-all shrink-0 z-10 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                            <i data-lucide="award" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                            <span class="px-3 py-1 bg-slate-100 text-slate-700 font-semibold text-xs rounded-full">2014 – 2016</span>
+                            <h3 class="text-lg font-bold text-slate-900 mt-2">Early IT Trainee Roles</h3>
+                            <p class="text-xs text-slate-500 mb-2">Branded Lifestyle Inc. | Outsourced Quality Assured Services Inc. | Computer Professionals Union</p>
+                            <p class="text-sm text-slate-600">Built foundation in system monitoring, desktop diagnostics, OS installation, network management, and Drupal web maintenance.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-20 bg-white border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-bold text-sky-600 uppercase tracking-widest">Verified Qualifications</h2>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Professional Certifications</p>
+                    <p class="text-slate-600">Continuous technical upskilling across key industry platforms, backup technologies, security systems, and IT management software.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">3CX Basic Certified Engineer v18</div>
+                            <div class="text-xs text-slate-500">3CX Telecommunications</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">3CX Basic Certified Engineer V20</div>
+                            <div class="text-xs text-slate-500">3CX Telecommunications</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Veeam Backup for Microsoft 365</div>
+                            <div class="text-xs text-slate-500">Veeam Software</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Veeam Onboarding for Data Platform</div>
+                            <div class="text-xs text-slate-500">Veeam Software</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Duo Security Level 1 Administrator</div>
+                            <div class="text-xs text-slate-500">Cisco Duo</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Duo Security Help Desk Administrator</div>
+                            <div class="text-xs text-slate-500">Cisco Duo</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Sophos Firewall V19.5 Engineer (ET80)</div>
+                            <div class="text-xs text-slate-500">Sophos Network Security</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Sophos Central Endpoint & Server v4.0 (ET15)</div>
+                            <div class="text-xs text-slate-500">Sophos</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Sophos Central Endpoint Delta-Engineer (EU15)</div>
+                            <div class="text-xs text-slate-500">Sophos</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Kaseya Certified Administrator - Datto BCDR</div>
+                            <div class="text-xs text-slate-500">Kaseya / Datto</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Datto Advanced Technician in Continuity</div>
+                            <div class="text-xs text-slate-500">Datto BCDR</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Datto Deployment Specialist in Continuity</div>
+                            <div class="text-xs text-slate-500">Datto BCDR</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Kaseya Datto Certified Practitioner in RMM</div>
+                            <div class="text-xs text-slate-500">Kaseya / Datto</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Kaseya Datto Certified Practitioner in SaaS Protection</div>
+                            <div class="text-xs text-slate-500">Kaseya / Datto</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Datto Certified Deployment Specialist in RMM</div>
+                            <div class="text-xs text-slate-500">Datto RMM</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">ConnectWise PSA Engineer/Technician</div>
+                            <div class="text-xs text-slate-500">ConnectWise</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">ConnectWise Webroot Endpoint Tech Cert</div>
+                            <div class="text-xs text-slate-500">ConnectWise</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">ConnectWise Dispatcher</div>
+                            <div class="text-xs text-slate-500">ConnectWise</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Addigy Academy Basics</div>
+                            <div class="text-xs text-slate-500">Addigy Apple MDM</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Skillsoft Windows Desktop Administration</div>
+                            <div class="text-xs text-slate-500">Skillsoft</div>
+                        </div>
+                    </div>
+                    <!-- Cert Item -->
+                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:border-sky-300 hover:shadow-md transition-all flex items-start gap-3 sm:col-span-2 lg:col-span-1">
+                        <div class="p-2 bg-sky-100 text-sky-700 rounded-lg shrink-0 mt-0.5">
+                            <i data-lucide="badge-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm">Helpdesk Habits Certification</div>
+                            <div class="text-xs text-slate-500">Customer Service Excellence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Banner -->
+        <section class="py-20 bg-gradient-to-r from-sky-900 via-slate-900 to-sky-950 text-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Ready to collaborate on your next IT project?</h2>
+                <p class="text-slate-300 text-lg max-w-2xl mx-auto">
+                    Whether you need server migrations, cloud infrastructure support, backup implementations, or systems administration expertise, I'm ready to assist.
+                </p>
+                <div class="pt-4 flex justify-center">
+                    <a href="mailto:villasshienamae@gmail.com" class="inline-flex items-center gap-3 bg-sky-500 hover:bg-sky-400 text-slate-950 font-extrabold px-10 py-5 rounded-2xl text-xl shadow-2xl hover:shadow-sky-500/25 hover:-translate-y-0.5 transition-all">
+                        Let’s Work together!
+                        <i data-lucide="send" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm">
+            <div class="flex items-center gap-2">
+                <span class="font-bold text-white">Shiena Mae Villas-Saguran</span>
+                <span>— IT Engineer & Systems Administrator</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="https://www.linkedin.com/in/shiena-mae-villas-saguran-b59506125" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+                </a>
+                <a href="https://villasshienamae.github.io/maetech.github.io/#" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="globe" class="w-4 h-4"></i> GitHub Portfolio
+                </a>
+                <a href="mailto:villasshienamae@gmail.com" class="text-sky-400 font-semibold hover:underline">
+                    Let’s Work together!
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons & Mobile Menu Script -->
+    <script>
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking menu items
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
