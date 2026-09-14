@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiena Mae Villas-Saguran — Systems Administrator & IT Specialist</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans (Editorial Sans) + Instrument Serif (Serif Accent) + JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#07090E',      // Editorial Deep Obsidian Neutral
+                            surface: '#0E131F',   // Elevated Section Surface
+                            card: '#141C2E',      // Structural Sub-Surface
+                            border: '#1E293B',    // Architectural Hairline Border
+                            borderLight: '#334155',
+                            primary: '#2563EB',   // Core Tech Accent Blue
+                            accent: '#38BDF8',    // Vivid Cyan Highlight
+                            light: '#F8FAFC',     // Stark Off-White Text
+                            muted: '#94A3B8',     // Slate Secondary Text
+                            dim: '#64748B'        // Darker Structural Labels
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Instrument Serif"', 'serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    animation: {
+                        'marquee': 'marquee 35s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::selection {
+            background-color: #2563EB;
+            color: #FFFFFF;
+        }
+
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-marquee {
+                animation: none !important;
+            }
+            .scroll-smooth {
+                scroll-behavior: auto !important;
+            }
+            .fade-in-up {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        .hairline-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased overflow-x-hidden selection:bg-brand-primary selection:text-white">
+
+    <!-- 01 — ANNOUNCEMENT BAR -->
+    <aside class="w-full bg-brand-surface border-b border-brand-border py-2.5 px-4 sm:px-8 text-xs font-mono tracking-wider relative z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-brand-muted uppercase">Status: <strong class="text-white font-normal">Available for Systems Admin & MSP Roles</strong></span>
+            </div>
+            <a href="mailto:villasshienamae@gmail.com" class="hidden sm:inline-flex items-center gap-1.5 text-brand-accent hover:text-white transition-colors uppercase font-medium">
+                <span>Let’s Work together!</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- 02 — NAVIGATION -->
+    <header class="sticky top-0 w-full z-40 bg-brand-dark/85 backdrop-blur-xl border-b border-brand-border/60 transition-all">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="group flex items-center gap-3">
+                <span class="text-lg font-bold tracking-tight text-white font-sans">
+                    Shiena Mae Villas-Saguran
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-brand-muted">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#tools" class="hover:text-white transition-colors">Tech Stack</a>
+                <a href="#certifications" class="hover:text-white transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </nav>
+
+            <!-- Primary Header CTA -->
+            <a href="mailto:villasshienamae@gmail.com" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-none border border-brand-primary bg-brand-primary/10 hover:bg-brand-primary text-white text-xs font-mono uppercase tracking-wider transition-all duration-300">
+                Let’s Work together!
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-brand-muted hover:text-white p-2" aria-label="Toggle Navigation Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-4 pb-8 border-b border-brand-border bg-brand-dark/95 backdrop-blur-2xl">
+            <nav class="flex flex-col gap-5 text-sm font-mono uppercase tracking-wider text-brand-muted">
+                <a href="#about" class="mobile-link hover:text-white transition-colors py-1">About</a>
+                <a href="#skills" class="mobile-link hover:text-white transition-colors py-1">Skills</a>
+                <a href="#experience" class="mobile-link hover:text-white transition-colors py-1">Experience</a>
+                <a href="#tools" class="mobile-link hover:text-white transition-colors py-1">Tech Stack</a>
+                <a href="#certifications" class="mobile-link hover:text-white transition-colors py-1">Certifications</a>
+                <a href="#contact" class="mobile-link hover:text-white transition-colors py-1">Contact</a>
+                <a href="mailto:villasshienamae@gmail.com" class="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-brand-primary bg-brand-primary text-white text-xs font-mono uppercase tracking-wider">
+                    Let’s Work together!
+                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 03 — HERO -->
+    <section class="min-h-[88vh] flex items-center py-20 px-6 sm:px-8 relative border-b border-brand-border hairline-grid overflow-hidden">
+        <div class="absolute top-1/4 right-10 w-[550px] h-[550px] bg-brand-primary/10 rounded-full blur-[160px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto w-full relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Text Content (Hero Main) -->
+                <div class="lg:col-span-8 space-y-8">
+                    <div class="inline-flex items-center gap-2 text-brand-accent font-mono text-xs uppercase tracking-widest border-b border-brand-accent/30 pb-1">
+                        IT Support Specialist | Systems Administrator & Network Operations
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.05]">
+                        Building <span class="font-serif italic font-normal text-brand-accent">uncompromising</span> IT infrastructure & continuous enterprise support.
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-brand-muted font-light leading-relaxed max-w-2xl">
+                        Systems Administrator with over 9 years of technical experience specializing in Managed Service Provider (MSP) environments, cloud tenant governance, endpoint security, and Level 1–3 infrastructure escalation.
+                    </p>
+
+                    <!-- Service Labels -->
+                    <div class="flex flex-wrap gap-3 pt-2 font-mono text-xs text-brand-muted">
+                        <span class="px-3 py-1.5 border border-brand-border bg-brand-surface/80">Microsoft 365 / Entra</span>
+                        <span class="px-3 py-1.5 border border-brand-border bg-brand-surface/80">Active Directory</span>
+                        <span class="px-3 py-1.5 border border-brand-border bg-brand-surface/80">Sophos Security</span>
+                        <span class="px-3 py-1.5 border border-brand-border bg-brand-surface/80">Datto & Veeam BCDR</span>
+                        <span class="px-3 py-1.5 border border-brand-border bg-brand-surface/80">3CX Telephony</span>
+                    </div>
+
+                    <!-- Hero Actions -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                        <a href="mailto:villasshienamae@gmail.com" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-primary hover:bg-blue-600 text-white font-semibold text-sm transition-all duration-300 shadow-xl shadow-blue-600/20 group">
+                            <span>Let’s Work together!</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shiena-mae-villas-saguran-b59506125" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 border border-brand-border hover:border-brand-muted bg-brand-surface/50 text-brand-light hover:text-white transition-all duration-300 text-sm font-medium">
+                            <i data-lucide="linkedin" class="w-4 h-4 text-brand-accent"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Editorial Technical Badge Frame (No Photo) -->
+                <div class="lg:col-span-4">
+                    <div class="w-full border border-brand-border bg-brand-surface p-6 flex flex-col justify-between space-y-6">
+                        <div class="flex items-center justify-between text-xs font-mono text-brand-dim uppercase tracking-wider pb-4 border-b border-brand-border/60">
+                            <span>GRADUATE DEGREE</span>
+                            <span>PUP-IT</span>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-none bg-brand-primary/10 border border-brand-primary/30 flex items-center justify-center text-brand-primary">
+                                <i data-lucide="cpu" class="w-6 h-6"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-white">Shiena Mae Villas-Saguran</h2>
+                            <p class="text-xs font-mono text-brand-accent uppercase tracking-widest">Systems Administrator</p>
+                            <div class="p-4 border border-brand-border bg-brand-dark/50 text-xs font-mono text-brand-muted space-y-2">
+                                <div class="text-white font-semibold mb-1">EDUCATION CREDENTIAL:</div>
+                                <div>Diploma in Computer Engineering Technology</div>
+                                <div class="text-brand-dim">Polytechnic University of the Philippines — Institute of Technology</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-[11px] font-mono text-brand-dim border-t border-brand-border/60 pt-4">
+                            <span>SYSTEMS & NETWORK</span>
+                            <span>9+ YRS EXP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 — RESULTS / METRICS -->
+    <section class="py-16 border-b border-brand-border bg-brand-surface/60">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-brand-border">
+                <div class="pt-4 lg:pt-0 lg:px-6 first:px-0">
+                    <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-sans tracking-tight mb-2">9+</span>
+                    <span class="block text-xs font-mono text-brand-accent uppercase tracking-widest mb-1">Years Experience</span>
+                    <span class="block text-xs text-brand-muted">Delivering L1–L3 IT support & system admin operations.</span>
+                </div>
+                <div class="pt-4 lg:pt-0 lg:px-6">
+                    <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-sans tracking-tight mb-2">MSP</span>
+                    <span class="block text-xs font-mono text-brand-accent uppercase tracking-widest mb-1">Environment Expert</span>
+                    <span class="block text-xs text-brand-muted">Managing multi-tenant clients across corporate accounts.</span>
+                </div>
+                <div class="pt-4 lg:pt-0 lg:px-6">
+                    <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-sans tracking-tight mb-2">L1–L3</span>
+                    <span class="block text-xs font-mono text-brand-accent uppercase tracking-widest mb-1">Support Range</span>
+                    <span class="block text-xs text-brand-muted">From tier-1 service desk to tier-3 escalation architecture.</span>
+                </div>
+                <div class="pt-4 lg:pt-0 lg:px-6">
+                    <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-sans tracking-tight mb-2">PUP-IT</span>
+                    <span class="block text-xs font-mono text-brand-accent uppercase tracking-widest mb-1">Computer Eng. Tech</span>
+                    <span class="block text-xs text-brand-muted">Polytechnic University of the Philippines.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 — ANIMATED MARQUEE -->
+    <section class="py-6 border-b border-brand-border bg-brand-dark overflow-hidden marquee-container select-none">
+        <div class="flex whitespace-nowrap animate-marquee marquee-content font-mono text-xs uppercase tracking-widest text-brand-muted">
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Systems Administration</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Microsoft 365 & Entra ID</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Managed Service Provider (MSP)</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Level 1–3 Technical Escalation</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Sophos Central Security</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Veeam & Datto BCDR Backup</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> 3CX PBX Telephony Administration</span>
+            
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Systems Administration</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Microsoft 365 & Entra ID</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Managed Service Provider (MSP)</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Level 1–3 Technical Escalation</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Sophos Central Security</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Veeam & Datto BCDR Backup</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> 3CX PBX Telephony Administration</span>
+        </div>
+    </section>
+
+    <!-- 06 — PROBLEM / POSITIONING SECTION -->
+    <section id="about" class="py-28 px-6 sm:px-8 border-b border-brand-border bg-brand-dark reveal-element">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-6">01 — The Approach</div>
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-7">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.12]">
+                        Downtime and security vulnerabilities stem from <span class="font-serif italic font-normal text-brand-accent">unmonitored</span> systems and fragmented support.
+                    </h2>
+                </div>
+                <div class="lg:col-span-5 space-y-6 text-brand-muted text-base sm:text-lg font-light leading-relaxed">
+                    <p>
+                        Modern organizations require more than basic reactive troubleshooting. They need proactive administration, strict device policies, resilient backup protocols, and quick L1–L3 incident escalation.
+                    </p>
+                    <p>
+                        With 9+ years of hands-on experience in Managed Service Providers (MSP) and enterprise IT environments, I bridge the gap between user accessibility and infrastructure security.
+                    </p>
+                    <div class="pt-4">
+                        <a href="mailto:villasshienamae@gmail.com" class="inline-flex items-center gap-2 text-white font-semibold hover:text-brand-accent transition-colors group text-sm">
+                            <span>Let’s Work together!</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07 — SKILLS SECTION -->
+    <section id="skills" class="py-28 px-6 sm:px-8 border-b border-brand-border bg-brand-surface/40 reveal-element">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-brand-border">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-2 block">02 — Core Capabilities</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Technical Domain Expertise</h2>
+                </div>
+                <p class="text-xs font-mono text-brand-muted uppercase tracking-wider mt-4 md:mt-0">Refined across 9+ years in production IT environments</p>
+            </div>
+
+            <!-- Numbered Editorial Rows -->
+            <div class="divide-y divide-brand-border border-b border-brand-border">
+                <div class="py-10 grid md:grid-cols-12 gap-6 items-start group hover:bg-brand-surface/60 transition-colors px-4 -mx-4">
+                    <div class="md:col-span-2 text-2xl font-mono text-brand-dim group-hover:text-brand-accent transition-colors">01 /</div>
+                    <div class="md:col-span-4">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Systems & Cloud Tenant Administration</h3>
+                        <span class="text-xs font-mono text-brand-accent">MICROSOFT 365 • ACTIVE DIRECTORY • ENTRA ID</span>
+                    </div>
+                    <div class="md:col-span-6 text-brand-muted text-sm font-light leading-relaxed">
+                        Full Lifecycle Active Directory & Entra ID management, user onboarding/offboarding, Group Policy Object (GPO) configuration, Exchange Online administration, and multi-tenant Microsoft 365 environment deployment.
+                    </div>
+                </div>
+
+                <div class="py-10 grid md:grid-cols-12 gap-6 items-start group hover:bg-brand-surface/60 transition-colors px-4 -mx-4">
+                    <div class="md:col-span-2 text-2xl font-mono text-brand-dim group-hover:text-brand-accent transition-colors">02 /</div>
+                    <div class="md:col-span-4">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Endpoint Protection & Security Compliance</h3>
+                        <span class="text-xs font-mono text-brand-accent">SOPHOS CENTRAL • INTUNE • ENCRYPTION</span>
+                    </div>
+                    <div class="md:col-span-6 text-brand-muted text-sm font-light leading-relaxed">
+                        Enforcing endpoint compliance with Microsoft Intune (MDM/MAM), deploying BitLocker drive encryption, configuring Sophos Central Endpoint security policies, patch management, and automated vulnerability remediations.
+                    </div>
+                </div>
+
+                <div class="py-10 grid md:grid-cols-12 gap-6 items-start group hover:bg-brand-surface/60 transition-colors px-4 -mx-4">
+                    <div class="md:col-span-2 text-2xl font-mono text-brand-dim group-hover:text-brand-accent transition-colors">03 /</div>
+                    <div class="md:col-span-4">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Backup & Disaster Recovery (BCDR)</h3>
+                        <span class="text-xs font-mono text-brand-accent">DATTO BCDR • VEEAM • SYSTEM RESTORE</span>
+                    </div>
+                    <div class="md:col-span-6 text-brand-muted text-sm font-light leading-relaxed">
+                        Implementing robust backup strategies using Datto BCDR and Veeam Backup & Replication. Performing regular verification testing, bare-metal restores, file-level recovery, and maintaining operational uptime.
+                    </div>
+                </div>
+
+                <div class="py-10 grid md:grid-cols-12 gap-6 items-start group hover:bg-brand-surface/60 transition-colors px-4 -mx-4">
+                    <div class="md:col-span-2 text-2xl font-mono text-brand-dim group-hover:text-brand-accent transition-colors">04 /</div>
+                    <div class="md:col-span-4">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">Network Infrastructure & Voice Systems</h3>
+                        <span class="text-xs font-mono text-brand-accent">3CX TELEPHONY • ROUTING • L1–L3 ESCALATION</span>
+                    </div>
+                    <div class="md:col-span-6 text-brand-muted text-sm font-light leading-relaxed">
+                        3CX IP Phone system setup, extension routing, SIP trunk administration, network troubleshooting (DNS, DHCP, VPN configurations), and resolving complex Level 1–3 technical escalations under strict SLAs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08 — EXPERIENCES (CLEAN LISTING, NO LOGOS) -->
+    <section id="experience" class="py-28 px-6 sm:px-8 border-b border-brand-border bg-brand-dark reveal-element">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 pb-6 border-b border-brand-border">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-2 block">03 — Career History</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Professional Experience</h2>
+                </div>
+                <p class="text-xs font-mono text-brand-muted uppercase tracking-wider mt-4 md:mt-0">Verified career track record</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Role 01 (ScalableOS) -->
+                <div class="grid lg:grid-cols-12 gap-8 items-start pb-16 border-b border-brand-border/60">
+                    <div class="lg:col-span-4 space-y-4">
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-widest">LATEST ROLE</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">IT Engineer</h3>
+                            <p class="text-base text-brand-muted font-medium">ScalableOS</p>
+                            <p class="text-xs font-mono text-brand-dim">April 2025 — Present</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-4 text-brand-muted text-base font-light leading-relaxed">
+                        <p>
+                            Delivering enterprise IT engineering support, system administration, cloud infrastructure governance, and continuous end-user operations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 font-mono text-xs text-white">
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">System Admin</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Cloud Governance</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">IT Operations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 02 (Techno Global Team Inc.) -->
+                <div class="grid lg:grid-cols-12 gap-8 items-start pb-16 border-b border-brand-border/60">
+                    <div class="lg:col-span-4 space-y-4">
+                        <span class="text-xs font-mono text-brand-dim uppercase tracking-widest">PREVIOUS ROLE</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">IT Engineer 2</h3>
+                            <p class="text-base text-brand-muted font-medium">Techno Global Team Inc.</p>
+                            <p class="text-xs font-mono text-brand-dim">April 2023 — April 2025</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-4 text-brand-muted text-base font-light leading-relaxed">
+                        <p>
+                            Provided high-level managed service support (MSP) for corporate accounts. Spearheaded Level 2 and Level 3 incident response, network monitoring, and cloud application governance across client environments.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 font-mono text-xs text-white">
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">MSP Escalation</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Intune</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Sophos Central</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">3CX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 03 (Reekoh) -->
+                <div class="grid lg:grid-cols-12 gap-8 items-start pb-16 border-b border-brand-border/60">
+                    <div class="lg:col-span-4 space-y-4">
+                        <span class="text-xs font-mono text-brand-dim uppercase tracking-widest">PREVIOUS ROLE</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Technical Support Engineer</h3>
+                            <p class="text-base text-brand-muted font-medium">Reekoh</p>
+                            <p class="text-xs font-mono text-brand-dim">May 2022 — April 2023</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-4 text-brand-muted text-base font-light leading-relaxed">
+                        <p>
+                            Handled advanced technical support operations, platform integration troubleshooting, incident management, and user escalation resolutions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 font-mono text-xs text-white">
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Technical Support</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Integrations</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Incident Resolution</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 04 (Mabcore Inc.) -->
+                <div class="grid lg:grid-cols-12 gap-8 items-start pb-16 border-b border-brand-border/60">
+                    <div class="lg:col-span-4 space-y-4">
+                        <span class="text-xs font-mono text-brand-dim uppercase tracking-widest">PREVIOUS ROLE</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Desktop Support Specialist</h3>
+                            <p class="text-base text-brand-muted font-medium">Mabcore Inc.</p>
+                            <p class="text-xs font-mono text-brand-dim">November 2021 — May 2022</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-4 text-brand-muted text-base font-light leading-relaxed">
+                        <p>
+                            Delivered tier-2 desktop support, endpoint hardware diagnostics, OS image deployment, system maintenance, and workstation security enforcement.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 font-mono text-xs text-white">
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Desktop Support</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Hardware Diagnostics</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">OS Deployment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 05 (Philippine Racing Club, Inc.) -->
+                <div class="grid lg:grid-cols-12 gap-8 items-start pb-16 border-b border-brand-border/60">
+                    <div class="lg:col-span-4 space-y-4">
+                        <span class="text-xs font-mono text-brand-dim uppercase tracking-widest">PREVIOUS ROLE</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">IT Specialist</h3>
+                            <p class="text-base text-brand-muted font-medium">Philippine Racing Club, Inc.</p>
+                            <p class="text-xs font-mono text-brand-dim">September 2017 — November 2021</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-4 text-brand-muted text-base font-light leading-relaxed">
+                        <p>
+                            Managed internal IT infrastructure, Active Directory domain services, network connectivity across departments, hardware deployment, and endpoint security enforcement for corporate headquarters and operational sites.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 font-mono text-xs text-white">
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Active Directory</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Network Admin</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Veeam Backup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Role 06 (Convergys Philippines) -->
+                <div class="grid lg:grid-cols-12 gap-8 items-start">
+                    <div class="lg:col-span-4 space-y-4">
+                        <span class="text-xs font-mono text-brand-dim uppercase tracking-widest">PREVIOUS ROLE</span>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Technical Support Associate II</h3>
+                            <p class="text-base text-brand-muted font-medium">Convergys Philippines</p>
+                            <p class="text-xs font-mono text-brand-dim">April 2016 — September 2017</p>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-8 space-y-4 text-brand-muted text-base font-light leading-relaxed">
+                        <p>
+                            Delivered multi-tiered service desk management, hardware troubleshooting, operating system deployment, user account provisioning, and customer service for technical operations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 font-mono text-xs text-white">
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Service Desk L1-L2</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">Hardware Diagnostics</span>
+                            <span class="px-2.5 py-1 bg-brand-surface border border-brand-border">SLA Ticket Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 09 — TECH STACK / TOOLS -->
+    <section id="tools" class="py-28 px-6 sm:px-8 border-b border-brand-border bg-brand-surface/30 reveal-element">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-3xl mb-16">
+                <span class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-2 block">04 — Platform Stack</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Tools & Operating Platforms</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 border border-brand-border bg-brand-surface/80 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-wider block mb-4">01 / CLOUD & IDENTITY</span>
+                        <h3 class="text-xl font-bold text-white mb-4">Identity & Cloud</h3>
+                        <ul class="space-y-2 text-sm text-brand-muted font-mono">
+                            <li>• Microsoft 365 Admin</li>
+                            <li>• Entra ID (Azure AD)</li>
+                            <li>• Active Directory / GPO</li>
+                            <li>• Exchange Online</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="p-8 border border-brand-border bg-brand-surface/80 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-wider block mb-4">02 / SECURITY & MDM</span>
+                        <h3 class="text-xl font-bold text-white mb-4">Endpoint & Security</h3>
+                        <ul class="space-y-2 text-sm text-brand-muted font-mono">
+                            <li>• Sophos Central Endpoint</li>
+                            <li>• Microsoft Intune (MDM)</li>
+                            <li>• BitLocker Encryption</li>
+                            <li>• Windows Defender</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="p-8 border border-brand-border bg-brand-surface/80 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-wider block mb-4">03 / BACKUP & RECOVERY</span>
+                        <h3 class="text-xl font-bold text-white mb-4">BCDR & Continuity</h3>
+                        <ul class="space-y-2 text-sm text-brand-muted font-mono">
+                            <li>• Datto BCDR</li>
+                            <li>• Veeam Backup & Rep</li>
+                            <li>• Cloud Backup Solutions</li>
+                            <li>• System Image Restores</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="p-8 border border-brand-border bg-brand-surface/80 flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-wider block mb-4">04 / VOICE & TICKETING</span>
+                        <h3 class="text-xl font-bold text-white mb-4">Comms & Ticketing</h3>
+                        <ul class="space-y-2 text-sm text-brand-muted font-mono">
+                            <li>• 3CX Phone System</li>
+                            <li>• ConnectWise / MSP RMM</li>
+                            <li>• Help Desk Ticketing</li>
+                            <li>• Remote Desktop Admin</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10 — CERTIFICATIONS SECTION -->
+    <section id="certifications" class="py-28 px-6 sm:px-8 border-b border-brand-border bg-brand-dark reveal-element">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-brand-border">
+                <div>
+                    <span class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-2 block">05 — Verified Credentials</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Certifications & Qualifications</h2>
+                </div>
+                <p class="text-xs font-mono text-brand-muted uppercase tracking-wider mt-4 md:mt-0">Industry & vendor accreditations</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cert 1 -->
+                <div class="p-8 border border-brand-border bg-brand-surface/80 hover:border-brand-accent/50 transition-colors flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-wider block">BCDR & CONTINUITY</span>
+                        <h3 class="text-xl font-bold text-white">Kaseya Certified Administrator</h3>
+                        <p class="text-xs font-mono text-brand-muted">Datto BCDR Platform</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between text-xs font-mono text-brand-dim">
+                        <span>BACKUP & RECOVERY</span>
+                        <i data-lucide="award" class="w-4 h-4 text-brand-accent"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="p-8 border border-brand-border bg-brand-surface/80 hover:border-brand-accent/50 transition-colors flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-wider block">IDENTITY & SECURITY</span>
+                        <h3 class="text-xl font-bold text-white">Cisco Duo Level 1</h3>
+                        <p class="text-xs font-mono text-brand-muted">Multi-Factor Authentication & Access</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between text-xs font-mono text-brand-dim">
+                        <span>SECURITY ADMIN</span>
+                        <i data-lucide="award" class="w-4 h-4 text-brand-accent"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="p-8 border border-brand-border bg-brand-surface/80 hover:border-brand-accent/50 transition-colors flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-wider block">SYSTEMS ADMINISTRATION</span>
+                        <h3 class="text-xl font-bold text-white">Windows Desktop Administrator</h3>
+                        <p class="text-xs font-mono text-brand-muted">Enterprise OS & Endpoint Management</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between text-xs font-mono text-brand-dim">
+                        <span>ENDPOINT ADMIN</span>
+                        <i data-lucide="award" class="w-4 h-4 text-brand-accent"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="p-8 border border-brand-border bg-brand-surface/80 hover:border-brand-accent/50 transition-colors flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-wider block">TELEPHONY & VOICE</span>
+                        <h3 class="text-xl font-bold text-white">3CX Telephony Systems</h3>
+                        <p class="text-xs font-mono text-brand-muted">IP PBX & SIP Administration</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between text-xs font-mono text-brand-dim">
+                        <span>VOIP ADMIN</span>
+                        <i data-lucide="award" class="w-4 h-4 text-brand-accent"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 5 -->
+                <div class="p-8 border border-brand-border bg-brand-surface/80 hover:border-brand-accent/50 transition-colors flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-wider block">ENDPOINT PROTECTION</span>
+                        <h3 class="text-xl font-bold text-white">Sophos Central Security</h3>
+                        <p class="text-xs font-mono text-brand-muted">Endpoint Protection & Threat Policies</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between text-xs font-mono text-brand-dim">
+                        <span>CYBERSECURITY</span>
+                        <i data-lucide="award" class="w-4 h-4 text-brand-accent"></i>
+                    </div>
+                </div>
+
+                <!-- Cert 6 -->
+                <div class="p-8 border border-brand-border bg-brand-surface/80 hover:border-brand-accent/50 transition-colors flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-wider block">MSP & RMM</span>
+                        <h3 class="text-xl font-bold text-white">ConnectWise Administration</h3>
+                        <p class="text-xs font-mono text-brand-muted">Service Desk & RMM Management</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between text-xs font-mono text-brand-dim">
+                        <span>MANAGED SERVICES</span>
+                        <i data-lucide="award" class="w-4 h-4 text-brand-accent"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11 — ABOUT (UPDATED EDUCATION CREDENTIALS) -->
+    <section class="py-28 px-6 sm:px-8 border-b border-brand-border bg-brand-dark reveal-element">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5">
+                    <div class="p-8 border border-brand-border bg-brand-surface relative">
+                        <span class="text-xs font-mono text-brand-accent uppercase tracking-widest block mb-4">BIOGRAPHY</span>
+                        <h2 class="text-3xl font-extrabold text-white mb-4">
+                            Hi, I'm <span class="font-serif italic font-normal text-brand-accent">Shiena</span>.
+                        </h2>
+                        <p class="text-brand-muted text-sm font-light leading-relaxed mb-6">
+                            Diploma in Computer Engineering Technology graduate from Polytechnic University of the Philippines — Institute of Technology (PUP-IT), bringing 9+ years of experience in system administration, managed services, and technical support.
+                        </p>
+                        <a href="mailto:villasshienamae@gmail.com" class="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary hover:bg-blue-600 text-white font-semibold text-xs font-mono uppercase tracking-wider transition-colors">
+                            Let’s Work together!
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 space-y-6 text-brand-muted text-lg font-light leading-relaxed">
+                    <span class="text-xs font-mono uppercase tracking-widest text-brand-accent block">06 — Philosophy</span>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                        Clear communication, proactive monitoring, and swift resolution.
+                    </h3>
+                    <p>
+                        My career has been built around keeping technology infrastructure stable and end-users productive. Whether operating inside fast-paced MSP environments or managing internal corporate systems, I emphasize security compliance, clear documentation, and efficient escalation workflows.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12 — FINAL CTA -->
+    <section id="contact" class="py-32 px-6 sm:px-8 border-b border-brand-border bg-brand-surface relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/10 via-transparent to-transparent pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-6 block">07 — Get In Touch</span>
+            <h2 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-[1.08] mb-8">
+                Ready to elevate your IT infrastructure & <span class="font-serif italic font-normal text-brand-accent">support reliability</span>?
+            </h2>
+            <p class="text-lg sm:text-xl text-brand-muted font-light max-w-2xl mx-auto mb-12">
+                Available for Systems Administrator, IT Support Specialist, and MSP Engineering roles. Let's discuss how I can support your technical operations.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <a href="mailto:villasshienamae@gmail.com" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand-primary hover:bg-blue-600 text-white font-bold text-base uppercase tracking-wider font-mono transition-all duration-300 shadow-2xl shadow-blue-600/30">
+                    <span>Let’s Work together!</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+
+            <div class="mt-16 flex flex-wrap items-center justify-center gap-8 text-xs font-mono text-brand-muted uppercase tracking-wider">
+                <span class="flex items-center gap-2">
+                    <i data-lucide="mail" class="w-4 h-4 text-brand-accent"></i>
+                    villasshienamae@gmail.com
+                </span>
+                <span>•</span>
+                <a href="https://www.linkedin.com/in/shiena-mae-villas-saguran-b59506125" target="_blank" rel="noopener noreferrer" class="hover:text-white flex items-center gap-1.5 transition-colors">
+                    <i data-lucide="linkedin" class="w-4 h-4 text-brand-accent"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13 — FOOTER -->
+    <footer class="py-12 px-6 sm:px-8 bg-brand-dark text-xs font-mono text-brand-dim border-t border-brand-border/40">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <span class="text-white font-bold">Shiena Mae Villas-Saguran</span>
+                <span class="text-brand-dim ml-2">/ IT Support & Systems Administrator</span>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#tools" class="hover:text-white transition-colors">Stack</a>
+                <a href="#certifications" class="hover:text-white transition-colors">Certifications</a>
+                <a href="mailto:villasshienamae@gmail.com" class="text-brand-accent hover:text-white transition-colors">Contact</a>
+            </div>
+
+            <div>
+                © <script>document.write(new Date().getFullYear())</script> Shiena Mae Villas-Saguran.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.12
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-element').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+            .scroll-smooth {
+                scroll-behavior: auto !important;
+            }
+            .fade-in-up {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+
+        .hairline-grid {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-element.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased overflow-x-hidden selection:bg-brand-primary selection:text-white">
+
+    <!-- 01 — ANNOUNCEMENT BAR -->
+    <aside class="w-full bg-brand-surface border-b border-brand-border py-2.5 px-4 sm:px-8 text-xs font-mono tracking-wider relative z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-brand-muted uppercase">Status: <strong class="text-white font-normal">Available for Systems Admin & MSP Roles</strong></span>
+            </div>
+            <a href="mailto:villasshienamae@gmail.com" class="hidden sm:inline-flex items-center gap-1.5 text-brand-accent hover:text-white transition-colors uppercase font-medium">
+                <span>Let’s Work together!</span>
+                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+        </div>
+    </aside>
+
+    <!-- 02 — NAVIGATION -->
+    <header class="sticky top-0 w-full z-40 bg-brand-dark/85 backdrop-blur-xl border-b border-brand-border/60 transition-all">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="group flex items-center gap-3">
+                <span class="text-lg font-bold tracking-tight text-white font-sans">
+                    Shiena Mae Villas-Saguran
+                </span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-brand-muted">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="#tools" class="hover:text-white transition-colors">Tech Stack</a>
+                <a href="#certifications" class="hover:text-white transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </nav>
+
+            <!-- Primary Header CTA -->
+            <a href="mailto:villasshienamae@gmail.com" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-none border border-brand-primary bg-brand-primary/10 hover:bg-brand-primary text-white text-xs font-mono uppercase tracking-wider transition-all duration-300">
+                Let’s Work together!
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-brand-muted hover:text-white p-2" aria-label="Toggle Navigation Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-4 pb-8 border-b border-brand-border bg-brand-dark/95 backdrop-blur-2xl">
+            <nav class="flex flex-col gap-5 text-sm font-mono uppercase tracking-wider text-brand-muted">
+                <a href="#about" class="mobile-link hover:text-white transition-colors py-1">About</a>
+                <a href="#skills" class="mobile-link hover:text-white transition-colors py-1">Skills</a>
+                <a href="#experience" class="mobile-link hover:text-white transition-colors py-1">Experience</a>
+                <a href="#tools" class="mobile-link hover:text-white transition-colors py-1">Tech Stack</a>
+                <a href="#certifications" class="mobile-link hover:text-white transition-colors py-1">Certifications</a>
+                <a href="#contact" class="mobile-link hover:text-white transition-colors py-1">Contact</a>
+                <a href="mailto:villasshienamae@gmail.com" class="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-brand-primary bg-brand-primary text-white text-xs font-mono uppercase tracking-wider">
+                    Let’s Work together!
+                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 03 — HERO -->
+    <section class="min-h-[88vh] flex items-center py-20 px-6 sm:px-8 relative border-b border-brand-border hairline-grid overflow-hidden">
+        <div class="absolute top-1/4 right-10 w-[550px] h-[550px] bg-brand-primary/10 rounded-full blur-[160px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto w-full relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                <!-- Text Content (Hero Main) -->
+                <div class="lg:col-span-8 space-y-8">
+                    <div class="inline-flex items-center gap-2 text-brand-accent font-mono text-xs uppercase tracking-widest border-b border-brand-accent/30 pb-1">
+                        IT Support Specialist | Systems Administrator & Network Operations
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.05]">
+                        Building <span class="font-serif italic font-normal text-brand-accent">uncompromising</span> IT infrastructure & continuous enterprise support.
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-brand-muted font-light leading-relaxed max-w-2xl">
+                        Systems Administrator with over 9 years of technical experience specializing in Managed Service Provider (MSP) environments, cloud tenant governance, endpoint security, and Level 1–3 infrastructure escalation.
+                    </p>
+
+                    <!-- Service Labels -->
+                    <div class="flex flex-wrap gap-3 pt-2 font-mono text-xs text-brand-muted">
+                        <span class="px-3 py-1.5 border border-brand-border bg-brand-surface/80">Microsoft 365 / Entra</span>
+                        <span class="px-3 py-1.5 border border-brand-border bg-brand-surface/80">Active Directory</span>
+                        <span class="px-3 py-1.5 border border-brand-border bg-brand-surface/80">Sophos Security</span>
+                        <span class="px-3 py-1.5 border border-brand-border bg-brand-surface/80">Datto & Veeam BCDR</span>
+                        <span class="px-3 py-1.5 border border-brand-border bg-brand-surface/80">3CX Telephony</span>
+                    </div>
+
+                    <!-- Hero Actions -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                        <a href="mailto:villasshienamae@gmail.com" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-brand-primary hover:bg-blue-600 text-white font-semibold text-sm transition-all duration-300 shadow-xl shadow-blue-600/20 group">
+                            <span>Let’s Work together!</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shiena-mae-villas-saguran-b59506125" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-7 py-4 border border-brand-border hover:border-brand-muted bg-brand-surface/50 text-brand-light hover:text-white transition-all duration-300 text-sm font-medium">
+                            <i data-lucide="linkedin" class="w-4 h-4 text-brand-accent"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Editorial Technical Badge Frame (No Photo) -->
+                <div class="lg:col-span-4">
+                    <div class="w-full border border-brand-border bg-brand-surface p-6 flex flex-col justify-between space-y-6">
+                        <div class="flex items-center justify-between text-xs font-mono text-brand-dim uppercase tracking-wider pb-4 border-b border-brand-border/60">
+                            <span>GRADUATE DEGREE</span>
+                            <span>PUP-IT</span>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 rounded-none bg-brand-primary/10 border border-brand-primary/30 flex items-center justify-center text-brand-primary">
+                                <i data-lucide="cpu" class="w-6 h-6"></i>
+                            </div>
+                            <h2 class="text-xl font-bold text-white">Shiena Mae Villas-Saguran</h2>
+                            <p class="text-xs font-mono text-brand-accent uppercase tracking-widest">Systems Administrator</p>
+                            <div class="p-4 border border-brand-border bg-brand-dark/50 text-xs font-mono text-brand-muted space-y-2">
+                                <div class="text-white font-semibold mb-1">EDUCATION CREDENTIAL:</div>
+                                <div>Diploma in Computer Engineering Technology</div>
+                                <div class="text-brand-dim">Polytechnic University of the Philippines — Institute of Technology</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between text-[11px] font-mono text-brand-dim border-t border-brand-border/60 pt-4">
+                            <span>SYSTEMS & NETWORK</span>
+                            <span>9+ YRS EXP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 — RESULTS / METRICS -->
+    <section class="py-16 border-b border-brand-border bg-brand-surface/60">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-brand-border">
+                <div class="pt-4 lg:pt-0 lg:px-6 first:px-0">
+                    <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-sans tracking-tight mb-2">9+</span>
+                    <span class="block text-xs font-mono text-brand-accent uppercase tracking-widest mb-1">Years Experience</span>
+                    <span class="block text-xs text-brand-muted">Delivering L1–L3 IT support & system admin operations.</span>
+                </div>
+                <div class="pt-4 lg:pt-0 lg:px-6">
+                    <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-sans tracking-tight mb-2">MSP</span>
+                    <span class="block text-xs font-mono text-brand-accent uppercase tracking-widest mb-1">Environment Expert</span>
+                    <span class="block text-xs text-brand-muted">Managing multi-tenant clients across corporate accounts.</span>
+                </div>
+                <div class="pt-4 lg:pt-0 lg:px-6">
+                    <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-sans tracking-tight mb-2">L1–L3</span>
+                    <span class="block text-xs font-mono text-brand-accent uppercase tracking-widest mb-1">Support Range</span>
+                    <span class="block text-xs text-brand-muted">From tier-1 service desk to tier-3 escalation architecture.</span>
+                </div>
+                <div class="pt-4 lg:pt-0 lg:px-6">
+                    <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white font-sans tracking-tight mb-2">PUP-IT</span>
+                    <span class="block text-xs font-mono text-brand-accent uppercase tracking-widest mb-1">Computer Eng. Tech</span>
+                    <span class="block text-xs text-brand-muted">Polytechnic University of the Philippines.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 — ANIMATED MARQUEE -->
+    <section class="py-6 border-b border-brand-border bg-brand-dark overflow-hidden marquee-container select-none">
+        <div class="flex whitespace-nowrap animate-marquee marquee-content font-mono text-xs uppercase tracking-widest text-brand-muted">
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Systems Administration</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Microsoft 365 & Entra ID</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Managed Service Provider (MSP)</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Level 1–3 Technical Escalation</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Sophos Central Security</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Veeam & Datto BCDR Backup</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> 3CX PBX Telephony Administration</span>
+            
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Systems Administration</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Microsoft 365 & Entra ID</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Managed Service Provider (MSP)</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Level 1–3 Technical Escalation</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Sophos Central Security</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> Veeam & Datto BCDR Backup</span>
+            <span class="mx-6 flex items-center gap-3"><span class="text-brand-accent font-serif italic font-normal text-base">✦</span> 3CX PBX Telephony Administration</span>
+        </div>
+    </section>
+
+    <!-- 06 — PROBLEM / POSITIONING SECTION -->
+    <section id="about" class="py-28 px-6 sm:px-8 border-b border-brand-border bg-brand-dark reveal-element">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-6">01 — The Approach</div>
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-7">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.12]">
+                        Downtime and security vulnerabilities stem from <span class="font-serif italic font-normal text-brand-accent">unmonitored</span> systems and fragmented support.
+                    </h2>
+                </div>
+                <div class="lg:col-span-5 space-y-6 text-brand-muted text-base sm:text-lg font-light leading-relaxed">
+                    <p>
+                        Modern organizations require more than basic reactive troubleshooting. They need proactive administration, strict device policies, resilient backup protocols, and quick L1–L3 incident escalation.
+                    </p>
+                    <p>
+                        With 9+ years of hands-on experience in Managed Service Providers (MSP) and enterprise IT environments, I bridge the gap between user accessibility and infrastructure security.
+                    </p>
+                  
